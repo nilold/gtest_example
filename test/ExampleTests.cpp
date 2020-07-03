@@ -19,13 +19,17 @@ struct ExampleTests
     }
 };
 
-TEST(ExampleTests, DemoGTestMacros) {
+TEST(ExampleTests1, DemoGTestMacros) {
     EXPECT_TRUE(true);
     ASSERT_TRUE(true); // stops if  fails
     EXPECT_EQ(65, 'A') << "This will be printed if its fails";
 }
 
-TEST(Exampletests, MAC) {
+TEST(ExampleTests1, DemoGTestMacrosFail) {
+    EXPECT_EQ(64, 'A') << "This will be printed if its fails";
+}
+
+TEST(Exampletests2, MAC) {
     int x = 42;
     int y = 16;
     int sum = 100;
