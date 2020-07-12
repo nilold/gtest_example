@@ -1,18 +1,16 @@
 cmake_minimum_required(VERSION 3.17.3)
 
-set(This ExampleTests)
+add_executable(ExampleTests ExampleTests.cpp)
 
-set(Sources
-    ExampleTests.cpp
-)
-
-add_executable(${This} ${Sources})
-target_link_libraries(${This} PUBLIC
+target_link_libraries(ExampleTests PUBLIC
     gtest_main
     gTestExample
 )
 
 add_test(
-    NAME ${This}
-    COMMAND ${This}
+    NAME ExampleTests
+    COMMAND ExampleTests
 )
+
+add_subdirectory(LearnCpp)
+add_subdirectory(JohnTheCat)
